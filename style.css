@@ -1,0 +1,312 @@
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+   ========================================================= */
+
+/* faz padding e border não aumentarem o tamanho da caixa */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #F4F6FA;  
+  color: #0F1B2E;               
+  font-family: "Archivo", sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", serif;
+  color: #14315C;               /* azul-marinho, cor de destaque dos títulos */
+  margin: 0 0 15px 0;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.secao-texto {
+  max-width: 600px;
+  color: #2E5686;
+}
+
+
+.foto {
+  background-color: #DEE6F0;
+  background-size: cover;
+  background-position: center;
+}
+
+.foto-sobre {
+  width: 100%;
+  height: 320px;
+}
+
+.foto-cartao {
+  width: 100%;
+  height: 220px;
+  margin-bottom: 15px;
+}
+
+.foto-galeria {
+  width: 100%;
+  height: 150px;
+}
+
+
+/*
+CABEÇALHO / MENU
+*/
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;              
+  padding: 20px;
+  background-color: #F4F6FA;
+  border-bottom: 1px solid #DCE3ED;
+}
+
+.logo {
+  font-family: "Fraunces", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #14315C;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;               /* os links quebram linha se não couberem */
+  gap: 25px;
+}
+
+.menu a:hover {
+  color: #ddaa4a;     
+  background-color: #e9e9e98f;           /* dourado ao passar o mouse */
+}
+
+
+/* 
+HERO (seção principal)
+*/
+.hero {
+  background-color: #14315C;     
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-conteudo {
+  max-width: 650px;
+}
+
+.hero-destaque {
+  color: #C9AD70;
+  font-size: 15px;
+}
+
+.hero h1 {
+  color: #FAFBFD;
+  font-size: 40px;
+  line-height: 1.25;
+}
+
+.hero-texto {
+  color: #C3CEDD;
+  font-size: 18px;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 14px 26px;
+  background-color: #AE8A48;
+  color: #0F1B2E;
+  font-weight: 600;
+  border: 1px solid #AE8A48;
+}
+
+.botao:hover {
+  background-color: transparent;
+  color: #FAFBFD;
+}
+
+/* linha decorativa entre o hero e o resto da página */
+.divisor {
+  height: 6px;
+  background-color: #AE8A48;
+}
+
+
+/* 
+SEÇÃO "A VILA" 
+*/
+.sobre {
+  display: flex;
+  flex-wrap: wrap;              
+  gap: 40px;
+  align-items: center;
+}
+
+.sobre-texto {
+  flex: 1 1 400px;              /* cresce, mas nunca fica menor que 400px */
+}
+
+.foto-sobre {
+  flex: 1 1 300px;
+}
+
+.fatos {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #DCE3ED;
+}
+
+.fato-titulo {
+  font-size: 13px;
+  color: #2E5686;
+  margin-bottom: 5px;
+}
+
+.fato-valor {
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  color: #AE8A48;
+  margin: 0;
+}
+
+
+/* 
+CARTÕES
+*/
+.cartoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.cartao {
+  flex: 1 1 220px;               /* 4 colunas no desktop, empilha no celular - primeiro 1 quer dizer que o elemento cresce, segundo 1 quer dizer que ele não encolhe e o terceiro 1 quer dizer que ele ocupa o espaço disponível */
+}
+
+.cartao h3 {
+  font-size: 17px;
+}
+
+.cartao-info {
+  flex: 1 1 220px;
+  border-top: 3px solid #C4A868;
+  padding-top: 15px;
+}
+
+
+/* 
+ROTEIRO (lista com dia + descrição)
+*/
+.lista-roteiro {
+  margin-top: 30px;
+}
+
+.dia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 25px 0;
+  border-top: 1px solid #DCE3ED;
+}
+
+.dia:last-child {
+  border-bottom: 1px solid #DCE3ED;
+}
+
+.dia-numero {
+  flex: 0 0 100px;               /* largura fixa da coluna do "Dia X" */
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #AE8A48;
+  margin: 0;
+}
+
+.dia-conteudo {
+  flex: 1 1 300px;
+}
+
+
+/* 
+GALERIA
+*/
+.galeria-grade {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.foto-galeria {
+  flex: 1 1 180px;
+}
+
+
+/* 
+   CITAÇÃO
+ */
+.citacao {
+  background-color: #14315C;
+  text-align: center;
+}
+
+.citacao blockquote {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #FAFBFD;
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.citacao cite {
+  display: block;
+  margin-top: 15px;
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  color: #9FB0C9;
+}
+
+
+/* 
+RODAPÉ
+*/
+.rodape {
+  background-color: #0F1B2E;
+  color: #AEBBCC;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-rodape {
+  color: #FAFBFD;
+}
+
+
